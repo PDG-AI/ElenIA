@@ -1,34 +1,25 @@
-# Configuración de audio
-INPUT_INDEX = 5  # Índice del dispositivo de entrada (Voicemeeter)
-OUTPUT_INDEX = 20  # Índice del dispositivo de salida
+import os
 
-# Configuración de TTS
-TTS_LANGUAGE = "es-ES"
-TTS_VOICE = "female"  # Voz femenina
-TTS_SPEED = 1.0
-TTS_ENGINE = "pyttsx3"  # Motor TTS por defecto
+# Rutas de archivos
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MEMORY_PATH = os.path.join(BASE_DIR, 'data', 'memory')
+LOG_PATH = os.path.join(BASE_DIR, 'data', 'logs')
+METRICS_PATH = os.path.join(BASE_DIR, 'data', 'metrics')
 
-# Configuración de OpenAI
-AI_MODEL = "gpt-4o-mini"  # Modelo por defecto
-MAX_TOKENS = 150  # Límite de tokens por respuesta
+# Configuración de la IA
+AI_MODEL = "gpt-4o-mini"
+MAX_TOKENS = 150
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
 # Configuración de memoria
-MEMORY_PATH = "memorias/"
-USE_EMBEDDINGS = True
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Modelo ligero para embeddings
+MAX_MEMORY_ITEMS = 1000
+MEMORY_RELEVANCE_THRESHOLD = 0.7
 
-# Configuración de STT
-STT_LANGUAGE = "es-ES"
-STT_TIMEOUT = 0.5  # Tiempo de espera para detección de silencio
-NOISE_THRESHOLD = 0.1  # Umbral de ruido
+# Configuración de personalidad
+EMOTION_DECAY_RATE = 0.1
+MAX_EMOTION_INTENSITY = 1.0
+MIN_EMOTION_INTENSITY = 0.0
 
-# Configuración de búsqueda
-SEARCH_ENGINE = "google"  # Motor de búsqueda por defecto
-
-# Configuración de filtrado
-BANNED_WORDS = []  # Lista de palabras prohibidas
-FILTER_PHONE_NUMBERS = True
-FILTER_ADDRESSES = True
-
-# Configuración de temporizadores
-TIMER_CHECK_INTERVAL = 1  # Intervalo de verificación de temporizadores en segundos 
+# Configuración de conversación
+MAX_CONVERSATION_HISTORY = 10
+MAX_SUMMARY_LENGTH = 200 
