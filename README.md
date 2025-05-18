@@ -43,6 +43,30 @@ pip install -r requirements.txt
 4. Crea un archivo `.env` en la raíz del proyecto y añade tu API key de OpenAI:
 ```
 OPENAI_API_KEY=tu_api_key_aqui
+OPENAI_API_KEY_S1=tu_api_key_aqui
+OPENAI_API_KEY_S2=tu_api_key_aqui
+OPENAI_API_KEY_S3=tu_api_key_aqui
+```
+
+5. Mueve los siguientes archivos a una carpeta llamada "modulos"
+```
+ai_manager.py
+constants.py
+filtrador.py
+logger_manager.py
+memory_manager.py
+metrics_manager.py
+notes_manager.py
+personality_manager.py
+searchs_manager.py
+secondary_ai_manager.py
+stt.py
+timer_manager.py
+tts.py
+```
+
+6. Configura las variables marcadas como #unicas de constants.py
+```
 ```
 
 ## Configuración
