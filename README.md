@@ -71,21 +71,17 @@ tts.py
 
 ## Configuración
 
-1. Ajusta los índices de audio en `constants.py` según tus dispositivos:
-   - `INPUT_INDEX`: Índice del dispositivo de entrada (Voicemeeter)
-   - `OUTPUT_INDEX`: Índice del dispositivo de salida
-
-2. Configura las preferencias de voz en `constants.py`:
-   - `TTS_LANGUAGE`: Idioma de la voz
-   - `TTS_VOICE`: Tipo de voz
-   - `TTS_SPEED`: Velocidad de la voz
+1. Configura las preferencias de voz en `tts.py`:
+```
+puedes cambiar el pitch y demas
+```
 
 ## Uso
 
 1. Asegúrate de que Voicemeeter está configurado correctamente
 2. Activa el entorno virtual si no está activado
 3. Ejecuta el bot:
-```bash
+```
 python bot.py
 ```
 
@@ -104,7 +100,8 @@ ElenIA/
 │   ├── timer_manager.py # Temporizadores
 │   ├── searchs_manager.py # Búsquedas
 │   ├── notes_manager.py   # Notas
-│   └── filtrador.py   # Filtrado de contenido
+│   ├── filtrador.py   # Filtrado de contenido
+|   └── ...
 └── memorias/          # Almacenamiento de memoria
 ```
 
@@ -114,4 +111,4 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir los c
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles. 
+Este proyecto está bajo la Licencia MIT.
