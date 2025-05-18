@@ -6,6 +6,12 @@ MEMORY_PATH = os.path.join(BASE_DIR, 'data', 'memory')
 LOG_PATH = os.path.join(BASE_DIR, 'data', 'logs')
 METRICS_PATH = os.path.join(BASE_DIR, 'data', 'metrics')
 
+# Configuración de Voicemeeter
+#UNICO
+VOICEMEETER_INPUT_INDEX = 0  # Índice del input de Voicemeeter (normalmente 0 para el micrófono)
+#UNICO
+VOICEMEETER_OUTPUT_INDEX = 0  # Índice del output de Voicemeeter (normalmente 0 para el altavoz principal)
+
 # Configuración de la IA
 AI_MODEL = "gpt-4o-mini"
 MAX_TOKENS = 150
