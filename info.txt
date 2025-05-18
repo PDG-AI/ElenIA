@@ -1,0 +1,49 @@
+MODULOS=(
+    
+    stt = se encarga de la logica de el stt, ajusta a ruido ambiente, en tiempo real (o lo mas rapido posible) transcribe el texto desde el INDEX establecido en constants
+    tts = se encarga de la logica de el tts, establece la velocidad, el tono y el motor usados en el tts, reproduce el audio en el OUTPUT_INDEX establecido en constants
+    bot = se encarga de el manejo, tambien reproduce el output de la IA con el tts
+    AI-manager = se encarga de la API de OpenAI y se lo manda a bot.py
+    constants = se encarga de guardar TODAS las configuraciones de los demas modulos, usa constantes para establecer todas las cosas, como idioma del tts, velocidad del tts, la IA que se debe usar, cualquier token, API o URL
+    timer_manager = se encarga de los temporizadores, cuando se le diga a la IA, pon un temporizador de 5 minutos, lo pasa el tiempo que necesite (segundos, horas o lo que sea) y pone una tarea (que no bloquee los demas procesos del bot) que tras ese tiempo diga un mensaje con tts
+    filtrador = se encarga de filtrar palabras como insultos, direcciones, numeros de tlfono, o otras palabras baneables en directos
+    prompter = se encarga de asignar el prompt a la IA
+    searchs_manager = se encarga de el sistema de busquedas por google, Edge, OperaGX o lo que cojones haya que usar
+    notes_manager = se encarga de las notas (comandos como "crea la nota [contenido de la nota] como [titulo de la nota]" "borra la nota [titulo de la nota]" "lee la nota[titulo de la nota])
+)
+
+DIRECCIONES =(
+    stt = /modulos
+    tts = /modulos
+    bot = carpeta principal
+    AI_manager = /modulos
+    constants = archivo principal
+    timer_manager = /modulos
+    filtrador = /modulos
+    prompter = /modulos
+    searchs_manager = /modulos
+    notes_manager = /modulos
+
+    OTROS(
+    ARCHIVO MEMORIA = /memorias
+    )
+)
+
+OTROS =(
+    la IA controla todo, el modulo notas por ejemplo, no sera un modulo activado por comandos, si no que la IA tendra la opcion de crear la Nota si cree que se lo hemos pedido, y la leera cuando crea que se lo hemos pedido
+    la IA no se conectara a discord, si no que, discord mandara el audio a voicemeeter y la IA recogera el audio desde alli
+    tts usara una voz femenina, lo mas parecido posible a neuro-sama
+    el bot en general no debera usar mucha RAM, CPU o GPU ya que ademas del bot ejecutare varios programas y al menos un juego
+    uso python3.11.9 y cuda11.8
+    no tengo casi experiencia en programar
+    no estoy dispuesto a dar info personal a paginas para descargar cosas y mucho menos a pagar
+    la IA usada sera alguna de OpenAI (GPT-3-turbo o GPT-4o-mini, la que de mas tokens gratis (y sea mas libre en ese aspecto de tokens))
+    estaria bien que el stt tuviera la capacidad de reconocer quien habla, y añadirlo justo antes del mensaje, asi la IA sabra quien le habla
+    la IA, al estar en un grupo de varias personas, no debera responder siempre, solo si te dirijes a ella, pero sin usar comandos
+    la IA, como muy posiblemente la meta en varios streams, debera poder iniciar conversaciones
+    la IA, debera tener memoria, pero que use la menos cantidad de prompt posible, o ninguno si se puede, y que no haya que decirle ningun comando para que acceda a la memoria
+    estaria bien que la memoria sea con embeddings, ya que segun he escuchado es mejor que JSONs
+    el stt estaria bien que fuera rapido, paciente (que no pare de escuchar al milisegundo) pero rapido
+    no tengo muchos recursos en mi PC (especificado en laptop_model.txt), asi que tiene que ser ligero
+    la IA tendra una personalidad graciosa, en resumen algo parecido a neuro-sama
+)

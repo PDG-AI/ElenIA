@@ -1,0 +1,7 @@
+lenovo ideapad gaming 3
+RAM: 32GB (dividido en dos ranuras con dual-channel) 3200MT/s SODIMM
+GPU (dedicada): NVIDIA GeForce RTX 3050 laptop GPU
+CPU: 12th Gen Intel(R) Core(TM) i5-12500H
+GPU (integrada): Intel(R) iris(R) Xe Graphics
+DISCOS: 2 discos SSD de 500GB
+pagefiles: 20GB por disco
